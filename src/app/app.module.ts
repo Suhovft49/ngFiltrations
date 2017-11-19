@@ -1,8 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ProductsComponent } from './products/products.component';
+
+import {
+  Routes,
+  RouterModule
+} from '@angular/router';
 
 // material design
 import {
@@ -77,12 +84,20 @@ import {
 })
 export class MaterialModule {}
 
+// routes
+const appRoutes: Routes = [
+  { path: '', component: ProductsComponent}
+];
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SidebarComponent,
+    ProductsComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule
