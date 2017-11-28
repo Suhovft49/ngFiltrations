@@ -1,27 +1,19 @@
 <button type="button" mat-button (click)="sidenav.open()">
   Open sidenav
 </button>
+
+<button type="button" mat-button (click)="sidenav.close()">
+  Close sidenav
+</button>
+
 <mat-sidenav-container class="example-container">
+
   <mat-sidenav #sidenav class="example-sidenav">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
 
-  <div class="example-sidenav-content">
-    <h2>Here are some links to help you start: </h2>
-    <ul>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-      </li>
-      <li>
-        <mat-checkbox>Check me!</mat-checkbox>
-      </li>
-    </ul>
-  </div>
+  <mat-sidenav-content>
+    <app-content></app-content>
+  </mat-sidenav-content>
 
 </mat-sidenav-container>

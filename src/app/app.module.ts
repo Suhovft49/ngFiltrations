@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProductsComponent } from './products/products.component';
+import { ContentComponent } from './content/content.component';
 
 import {
   Routes,
@@ -94,7 +95,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     SidebarComponent,
-    ProductsComponent
+    ProductsComponent,
+    ContentComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
