@@ -1,15 +1,24 @@
-<button type="button" mat-button (click)="sidenav.toggle()">
-  Filter
-</button>
+<div class="l-products-panel">
 
-<mat-sidenav-container class="example-container">
+  <button type="button" mat-button (click)="sidenav.toggle()">
+    Filter
+  </button>
 
-  <mat-sidenav #sidenav class="example-sidenav">
-    <app-sidebar></app-sidebar>
-  </mat-sidenav>
+  <span>4 Data-sets found:</span>
+
+</div>
+
+
+<mat-sidenav-container class="b-sidenav">
 
   <mat-sidenav-content>
-    <app-content></app-content>
+
+    <mat-sidenav #sidenav class="b-sidenav__panel g-border">
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+
+    <app-content [ngClass]="{opened: sidenav.opened}"></app-content>
+
   </mat-sidenav-content>
 
 </mat-sidenav-container>

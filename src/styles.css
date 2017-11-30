@@ -5,29 +5,45 @@ html, body {
   min-height: 100%;
   height: 100%;
   overflow: hidden;
+  background: #f2f2f2;
 }
 
 .header {
   width: 100%;
-  height: 40px;
   background: #ccc;
-  line-height: 40px;
-  padding: 5px;
 }
 
-.example-container {
+.g-border {
+  border: 1px solid #ccc;
+}
+
+/* ------------- SIDENAV -----------------------------------------*/
+
+.b-sidenav {
   width: 100%;
   height: 100%;
-  padding-bottom: 35px;
+  background: #f2f2f2;
+  padding: 0 10px 35px;
 }
 
-.example-sidenav-content {
+.b-sidenav__content {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
 }
 
-.example-sidenav {
+.b-sidenav__panel {
+  width: 230px;
   padding: 20px;
 }
+
+.opened, .l-sidenav-content {
+  transition: all .2s ease;
+}
+
+.opened .l-sidenav-content {
+  padding-left: 245px;
+}
+
+/* ------------- /SIDENAV ----------------------------------------*/
