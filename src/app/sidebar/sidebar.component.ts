@@ -8,6 +8,25 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  filtersArray: any = [
+    {
+      'filterName': 'Data Quality',
+      'filterList': []
+    },
+    {
+      'filterName': 'Payment',
+      'filterList': ['Free', 'Pay Per Use', 'Pay Per Vol']
+    },
+    {
+      'filterName': 'Semantics & syntax',
+      'filterList': ['GS1', 'XML', 'RDF', 'JSON', 'JSONP']
+    },
+    {
+      'filterName': 'Transmission',
+      'filterList': ['MQTT', 'HTTP', 'HTTPS', 'Web-Services']
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

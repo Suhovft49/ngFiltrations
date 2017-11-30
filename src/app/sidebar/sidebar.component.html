@@ -1,8 +1,8 @@
-<div>
-  <span>Payment</span>
+<div *ngFor="let filter of filtersArray">
+  <span>{{filter.filterName}}</span>
   <ul>
-    <li>
-      <mat-checkbox>Free</mat-checkbox>
+    <li *ngFor="let filterItem of filter.filterList">
+      <mat-checkbox>{{filterItem}}</mat-checkbox>
     </li>
   </ul>
 </div>
