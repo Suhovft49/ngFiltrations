@@ -2,3 +2,16 @@
   width: 100%;
   background: #fff;
 }
+
+.b-item__name {
+  font-weight: bold;
+  color: #005391;
+}
+
+.b-item__rate {
+
+}
+
+.b-item__img {
+  width: 100%;
+}

@@ -17,6 +17,10 @@ html, body {
   border: 1px solid #ccc;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 /* ------------- SIDENAV -----------------------------------------*/
 
 .b-sidenav {

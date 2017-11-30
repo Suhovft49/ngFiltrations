@@ -12,13 +12,25 @@ export class ContentComponent implements OnInit {
     {
       'name': 'Weather Feed Germany',
       'quality': 4,
-      'description': 'Lorem ipsum dotor sit ammet',
-      'domain': 'Health',
-      'region': 'Deutshland',
+      'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
+      'params': [
+        {
+          'name': 'Domain',
+          'curVal': 'Health',
+        },
+        {
+          'name': 'Region',
+          'curVal': 'Deutshland',
+        },
+        {
+          'name': 'Data-type',
+          'curVal': 'JSON',
+        }
+      ],
       'img': './assets/img/graf.png',
-      'dataType': 'JSON',
       'logoImg': './assets/img/DB-Bahn.png',
       'price': 19,
+      'currency': '€'
     }
   ];
 

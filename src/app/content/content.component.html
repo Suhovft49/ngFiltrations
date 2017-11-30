@@ -1,8 +1,41 @@
-<div class="l-sidenav-content">
+<div class="l-sidenav-content container-fluid no-padding">
 
   <div class="b-item g-border" *ngFor="let item of contentArray">
-    {{item.name}}
-    <img [src]="item.img" alt="image">
+
+    <div class="row">
+      <div class="col-md-12">
+        <span class="b-item__name">{{item.name}}</span>
+        <span class="b-item__rate">rate 4</span>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <span class="col-md-2">
+        <img [src]="item.img" class="b-item__img" alt="image">
+      </span>
+
+      <span class="b-item__descr col-md-8">{{item.description}}</span>
+
+      <span class="col-md-2">
+        <img [src]="item.logoImg" class="b-item__img" alt="image">
+      </span>
+    </div>
+
+
+    <div class="row">
+      <span *ngFor="let param of item.params" class="col-md-auto">
+        <div>{{param.name}}</div>
+        <span>{{param.curVal}}</span>
+      </span>
+
+      <span class="col-md">
+        <button class="float-right" type="button" mat-button>
+          from {{item.price}} {{item.currency}}
+        </button>
+      </span>
+    </div>
+
   </div>
 
 </div>
