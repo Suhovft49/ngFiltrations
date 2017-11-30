@@ -1,9 +1,5 @@
-<button type="button" mat-button (click)="sidenav.open()">
-  Open sidenav
-</button>
-
-<button type="button" mat-button (click)="sidenav.close()">
-  Close sidenav
+<button type="button" mat-button (click)="!sidenav.opened ? sidenav.open() : sidenav.close()">
+  Filter
 </button>
 
 <mat-sidenav-container class="example-container">
