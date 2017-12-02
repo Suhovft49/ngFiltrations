@@ -1,0 +1,20 @@
+{
+  "filtersArray": [
+    {
+      "filterName": "Data Quality",
+      "filterList": []
+    },
+    {
+      "filterName": "Payment",
+      "filterList": ["Free", "Pay Per Use", "Pay Per Vol"]
+    },
+    {
+      "filterName": "Semantics & syntax",
+      "filterList": ["GS1", "XML", "RDF", "JSON", "JSONP"]
+    },
+    {
+      "filterName": "Transmission",
+      "filterList": ["MQTT", "HTTP", "HTTPS", "Web-Services"]
+    }
+  ]
+}

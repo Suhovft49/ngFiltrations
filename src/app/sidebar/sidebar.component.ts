@@ -1,35 +1,23 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { HttpService} from '../serv/http.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
+  providers: [HttpService],
   encapsulation: ViewEncapsulation.None
 })
 export class SidebarComponent implements OnInit {
 
-  filtersArray: any = [
-    {
-      'filterName': 'Data Quality',
-      'filterList': []
-    },
-    {
-      'filterName': 'Payment',
-      'filterList': ['Free', 'Pay Per Use', 'Pay Per Vol']
-    },
-    {
-      'filterName': 'Semantics & syntax',
-      'filterList': ['GS1', 'XML', 'RDF', 'JSON', 'JSONP']
-    },
-    {
-      'filterName': 'Transmission',
-      'filterList': ['MQTT', 'HTTP', 'HTTPS', 'Web-Services']
-    }
-  ];
+  filtersArray: any;
 
-  constructor() { }
+  constructor(private httpService: HttpService) { }
 
   ngOnInit() {
+    this.httpService
+      .getData('./assets/json/products-filters.json')
+      .subscribe((data: any) => this.filtersArray = data['filtersArray']);
   }
 
 }

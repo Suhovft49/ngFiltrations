@@ -1,42 +1,23 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { HttpService} from '../serv/http.service';
 
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css'],
+  providers: [HttpService],
   encapsulation: ViewEncapsulation.None
 })
 export class ContentComponent implements OnInit {
 
-  contentArray: any = [
-    {
-      'name': 'Weather Feed Germany',
-      'quality': 4,
-      'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
-      'params': [
-        {
-          'name': 'Domain',
-          'curVal': 'Health',
-        },
-        {
-          'name': 'Region',
-          'curVal': 'Deutshland',
-        },
-        {
-          'name': 'Data-type',
-          'curVal': 'JSON',
-        }
-      ],
-      'img': './assets/img/graf.png',
-      'logoImg': './assets/img/DB-Bahn.png',
-      'price': 19,
-      'currency': '€'
-    }
-  ];
+  contentArray: any;
 
-  constructor() { }
+  constructor(private httpService: HttpService) { }
 
   ngOnInit() {
+    this.httpService
+      .getData('./assets/json/products.json')
+      .subscribe((data: any) => this.contentArray = data['contentArray']);
   }
 
 }
