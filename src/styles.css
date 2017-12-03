@@ -42,6 +42,12 @@ html, body {
   padding: 20px;
 }
 
+.l-sidenav-content {
+  overflow: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 80px);
+}
+
 .opened, .l-sidenav-content {
   transition: all .2s ease;
 }

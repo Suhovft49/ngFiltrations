@@ -1,6 +1,7 @@
 .b-item {
   width: 100%;
   background: #fff;
+  margin-bottom: 10px;
 }
 
 .b-item__name {
