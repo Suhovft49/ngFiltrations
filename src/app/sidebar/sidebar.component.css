@@ -16,11 +16,11 @@
   background: #f2f2f2;
 }
 
-.m-sibenav-opened,
+.m-sidenav-opened,
 .b-sidenav__content {
   transition: all .2s ease;
 }
 
-.m-sibenav-opened .b-sidenav__content {
+.m-sidenav-opened .b-sidenav__content {
   padding-left: 245px;
 }

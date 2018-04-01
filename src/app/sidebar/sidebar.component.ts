@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { HttpService} from '../serv/http.service';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { HttpService } from '../serv/http.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,6 +9,7 @@ import { HttpService} from '../serv/http.service';
   encapsulation: ViewEncapsulation.None
 })
 export class SidebarComponent implements OnInit {
+  @Input() isOpened: boolean;
 
   filtersArray: any;
 

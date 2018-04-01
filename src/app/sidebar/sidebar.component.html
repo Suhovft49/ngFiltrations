@@ -1,7 +1,8 @@
 <mat-sidenav-container class="b-sidenav">
   <mat-sidenav-content>
-
-    <mat-sidenav #sidenav opened="true" class="b-sidenav__panel px-3 pt-3 pb-0 border">
+    <mat-sidenav #sidenav opened="true"
+                 [(opened)]="isOpened"
+                 class="b-sidenav__panel px-3 pt-3 pb-0 border">
       <div *ngFor="let filter of filtersArray">
         <span>{{filter.filterName}}</span>
         <ul>

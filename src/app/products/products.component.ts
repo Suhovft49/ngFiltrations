@@ -7,10 +7,16 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ProductsComponent implements OnInit {
+  isOpened: boolean;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    this.isOpened = true;
+  }
+
+  openSidenav() {
+    this.isOpened = !this.isOpened;
   }
 
 }
