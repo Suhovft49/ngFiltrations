@@ -1,5 +1,10 @@
-<header class="header">
-  <button mat-button routerLink="/">Products</button>
-</header>
-
-<router-outlet></router-outlet>
+<div class="container-fluid">
+  <header class="header rounded border">
+    <nav class="nav nav-pills nav-justified">
+      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link active" routerLink="/">Products</a>
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </nav>
+  </header>
+  <router-outlet></router-outlet>
+</div>

@@ -1,11 +1,10 @@
 .b-item {
   width: 100%;
   background: #fff;
-  margin-bottom: 10px;
 }
 
 .b-item__name {
-  font-weight: bold;
+  font-size: 20px;
   color: #005391;
 }
 

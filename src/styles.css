@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
 
 html, body {
   min-height: 100%;
@@ -10,50 +9,16 @@ html, body {
 
 .header {
   width: 100%;
-  background: #ccc;
+  margin: 5px 0;
+  padding: 5px 8px;
+  background: #fff;
 }
 
-.g-border {
+button[type=button] {
+  outline: none;
+}
+
+.custom_button {
+  color: #000;
   border: 1px solid #ccc;
 }
-
-.no-padding {
-  padding: 0;
-}
-
-/* ------------- SIDENAV -----------------------------------------*/
-
-.b-sidenav {
-  width: 100%;
-  height: 100%;
-  background: #f2f2f2;
-  padding: 0 10px 35px;
-}
-
-.b-sidenav__content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.b-sidenav__panel {
-  width: 230px;
-  padding: 20px;
-}
-
-.l-sidenav-content {
-  overflow: hidden;
-  overflow-y: auto;
-  height: calc(100vh - 80px);
-}
-
-.opened, .l-sidenav-content {
-  transition: all .2s ease;
-}
-
-.opened .l-sidenav-content {
-  padding-left: 245px;
-}
-
-/* ------------- /SIDENAV ----------------------------------------*/

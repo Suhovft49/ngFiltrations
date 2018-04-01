@@ -1,24 +1,14 @@
-<div class="l-products-panel">
+<div class="products m-sibenav-opened">
+  <div class="products-filters">
+    <button type="button" mat-button (click)="sidenav.toggle()">
+      Filters
+    </button>
+    <span>4 Data-sets found:</span>
+    <span>Selector Sort By</span>
+  </div>
 
-  <button type="button" mat-button (click)="sidenav.toggle()">
-    Filter
-  </button>
-
-  <span>4 Data-sets found:</span>
-
+  <app-sidebar>
+    <!--<app-content class="m-sibenav-opened" [ngClass]="{m-sibenav-opened: sidenav.opened}"></app-content>-->
+    <app-content></app-content>
+  </app-sidebar>
 </div>
-
-
-<mat-sidenav-container class="b-sidenav">
-
-  <mat-sidenav-content>
-
-    <mat-sidenav #sidenav opened="true" class="b-sidenav__panel g-border">
-      <app-sidebar></app-sidebar>
-    </mat-sidenav>
-
-    <app-content [ngClass]="{opened: sidenav.opened}"></app-content>
-
-  </mat-sidenav-content>
-
-</mat-sidenav-container>

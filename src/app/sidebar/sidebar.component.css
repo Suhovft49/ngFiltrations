@@ -1,0 +1,26 @@
+.b-sidenav {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.b-sidenav__content {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 102px);
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.b-sidenav__panel {
+  width: 230px;
+  background: #f2f2f2;
+}
+
+.m-sibenav-opened,
+.b-sidenav__content {
+  transition: all .2s ease;
+}
+
+.m-sibenav-opened .b-sidenav__content {
+  padding-left: 245px;
+}
