@@ -4,10 +4,10 @@
                  [(opened)]="isOpened"
                  class="b-sidenav__panel px-3 pt-3 pb-0 border">
       <div *ngFor="let filter of filtersArray">
-        <span>{{filter.filterName}}</span>
+        <span>{{ filter.filterName }}</span>
         <ul>
           <li *ngFor="let filterItem of filter.filterList">
-            <mat-checkbox>{{filterItem}}</mat-checkbox>
+            <mat-checkbox [value]="filterItem.value">{{ filterItem.name }}</mat-checkbox>
           </li>
         </ul>
       </div>

@@ -10,6 +10,11 @@ import { ContentComponent } from './content/content.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
+// fake data service
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { SettingsService } from './settings.service';
+
 import {
   Routes,
   RouterModule
@@ -108,9 +113,12 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 600 })
   ],
-  providers: [],
+  providers: [
+    SettingsService // here for using Rxjs Subject
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

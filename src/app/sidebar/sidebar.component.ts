@@ -1,11 +1,10 @@
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
-import { HttpService } from '../serv/http.service';
+import { SettingsService } from '../settings.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
-  providers: [HttpService],
   encapsulation: ViewEncapsulation.None
 })
 export class SidebarComponent implements OnInit {
@@ -13,12 +12,19 @@ export class SidebarComponent implements OnInit {
 
   filtersArray: any;
 
-  constructor(private httpService: HttpService) { }
+  constructor(private settingsService: SettingsService) { }
 
   ngOnInit() {
-    this.httpService
-      .getData('./assets/json/products-filters.json')
-      .subscribe((data: any) => this.filtersArray = data['filtersArray']);
+    this.getfilters();
+  }
+
+  getfilters() {
+    this.settingsService
+      .getSettings()
+      .then((data) => {
+        this.filtersArray = data;
+      })
+      .catch(error => this.error = error);
   }
 
 }

@@ -1,13 +1,24 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class HttpService {
+  private contentUrl = 'app/content';  // URL to content object
 
   constructor(private http: HttpClient) {}
 
-  getData(url): Observable<any> {
-    return this.http.get(url);
+  getContent(): Promise<Array> {
+    console.log('send get');
+    return this.http
+      .get(this.contentUrl)
+      .toPromise()
+      .then((response) => response as [])
+      .catch(this.handleError);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error);
+    return Promise.reject(error.body.error || error);
   }
 }
