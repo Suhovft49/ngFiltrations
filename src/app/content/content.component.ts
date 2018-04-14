@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpService} from '../serv/http.service';
+import { SettingsService } from '../settings.service';
 // import 'rxjs/add/operator/filter';
 
 @Component({
@@ -10,10 +11,16 @@ import { HttpService} from '../serv/http.service';
   encapsulation: ViewEncapsulation.None
 })
 export class ContentComponent implements OnInit {
-
+  error: string;
   contentArray: any;
+  filters: any;
 
-  constructor(private httpService: HttpService) { }
+  constructor(private httpService: HttpService, private settingsService: SettingsService) {
+    // rxjs subscriber
+    this.settingsService.catchSetting().subscribe(filters => {
+      this.filters = filters;
+    });
+  }
 
   ngOnInit() {
     // this.getItems();

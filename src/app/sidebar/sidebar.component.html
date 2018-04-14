@@ -7,7 +7,8 @@
         <span>{{ filter.filterName }}</span>
         <ul>
           <li *ngFor="let filterItem of filter.filterList">
-            <mat-checkbox [value]="filterItem.value">{{ filterItem.name }}</mat-checkbox>
+            <mat-checkbox (click)="saveFilters()"
+                          [(ngModel)]="filterItem.value">{{ filterItem.name }}</mat-checkbox>
           </li>
         </ul>
       </div>

@@ -3,15 +3,17 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const settings = [
+      // {
+      //   'id': 'quality',
+      //   'filterName': 'Data Quality',
+      //   'filterList': [
+      //     {
+      //       'name': 'quality',
+      //       'value': 4
+      //     }]
+      // },
       {
-        'filterName': 'Data Quality',
-        'filterList': [
-          {
-            'name': 'quality',
-            'value': 4
-          }]
-      },
-      {
+        'id': 'payment',
         'filterName': 'Payment',
         'filterList': [
           {
@@ -28,6 +30,7 @@ export class InMemoryDataService implements InMemoryDbService {
           }]
       },
       {
+        'id': 'syntax',
         'filterName': 'Semantics & syntax',
         'filterList': [
           {
@@ -60,6 +63,7 @@ export class InMemoryDataService implements InMemoryDbService {
           }]
       },
       {
+        'id': 'transmission',
         'filterName': 'Transmission',
         'filterList': [
           {
@@ -83,6 +87,7 @@ export class InMemoryDataService implements InMemoryDbService {
 
     const content = [
       {
+        'id': 0,
         'name': 'Weather Feed Germany',
         'quality': 2,
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
@@ -106,6 +111,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'currency': '€'
       },
       {
+        'id': 1,
         'name': 'Weather Feed Germany',
         'quality': 4,
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
@@ -129,6 +135,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'currency': '€'
       },
       {
+        'id': 2,
         'name': 'Weather Feed Germany',
         'quality': 2,
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
@@ -152,6 +159,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'currency': '€'
       },
       {
+        'id': 3,
         'name': 'Weather Feed Germany',
         'quality': 4,
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
@@ -175,6 +183,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'currency': '€'
       },
       {
+        'id': 4,
         'name': 'Weather Feed Germany',
         'quality': 4,
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
@@ -198,6 +207,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'currency': '€'
       },
       {
+        'id': 5,
         'name': 'Weather Feed Germany',
         'quality': 4,
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',

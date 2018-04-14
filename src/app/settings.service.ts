@@ -12,32 +12,32 @@ export class SettingsService {
 
   constructor(private http: HttpClient) {}
 
-  sendSetting(message: any) {
-    this.subject.next(message);
+  // rxjs Subscriber parts
+  sendSetting(settings: any) {
+    this.subject.next(settings);
   }
-
   catchSetting(): Observable<any> {
     return this.subject.asObservable();
   }
 
-  getSettings(): Promise<Array> {
+  getSettings(): Promise<any> {
     return this.http
       .get(this.settingsUrl)
       .toPromise()
-      .then((response) => response.data as [])
+      .then((response) => response)
       .catch(this.handleError);
   }
 
-  setSettings(settings: any) {
-    return this.putSetting(settings);
-  }
-
-  private putSetting(settings: any): Promise<any> {
-    const url = `${this.settingsUrl}/${settings.id}`;
-    return this.http
-      .post(url, settings)
-      .toPromise();
-  }
+  // setSettings(settings: any) {
+  //   return this.putSetting(settings);
+  // }
+  //
+  // private putSetting(settings: any): Promise<any> {
+  //   const url = `${this.settingsUrl}/${settings.id}`;
+  //   return this.http
+  //     .post(url, settings)
+  //     .toPromise();
+  // }
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);

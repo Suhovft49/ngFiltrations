@@ -8,12 +8,12 @@ export class HttpService {
 
   constructor(private http: HttpClient) {}
 
-  getContent(): Promise<Array> {
+  getContent(): Promise<any> {
     console.log('send get');
     return this.http
       .get(this.contentUrl)
       .toPromise()
-      .then((response) => response as [])
+      .then((response) => response)
       .catch(this.handleError);
   }
 

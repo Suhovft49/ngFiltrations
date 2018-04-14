@@ -10,21 +10,26 @@ import { SettingsService } from '../settings.service';
 export class SidebarComponent implements OnInit {
   @Input() isOpened: boolean;
 
+  error: string;
   filtersArray: any;
 
   constructor(private settingsService: SettingsService) { }
 
   ngOnInit() {
-    this.getfilters();
+    this.getFilters();
   }
 
-  getfilters() {
+  getFilters() {
     this.settingsService
       .getSettings()
-      .then((data) => {
-        this.filtersArray = data;
+      .then((res) => {
+        this.filtersArray = res.data;
       })
       .catch(error => this.error = error);
+  }
+
+  saveFilters(): void {
+    this.settingsService.sendSetting(this.filtersArray);
   }
 
 }
