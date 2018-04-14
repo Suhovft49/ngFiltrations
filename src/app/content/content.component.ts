@@ -23,14 +23,14 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.getItems();
+    this.getItems();
   }
 
   getItems() {
     this.httpService
       .getContent()
-      .then((data) => {
-        console.log(data);
+      .then((resp) => {
+        this.contentArray = resp.data;
       })
       .catch(error => this.error = error);
   }

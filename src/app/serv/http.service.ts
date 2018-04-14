@@ -9,9 +9,9 @@ export class HttpService {
   constructor(private http: HttpClient) {}
 
   getContent(): Promise<any> {
-    console.log('send get');
     return this.http
-      .get(this.contentUrl)
+      // .get(`app/content?quality=2&id=2`)
+      .get(`app/content?payment=Free`)
       .toPromise()
       .then((response) => response)
       .catch(this.handleError);

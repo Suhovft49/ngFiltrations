@@ -18,11 +18,11 @@ export class InMemoryDataService implements InMemoryDbService {
         'filterList': [
           {
             'name': 'Free',
-            'value': true
+            'value': false
           },
           {
             'name': 'Pay Per Use',
-            'value': true
+            'value': false
           },
           {
             'name': 'Pay Per Vol',
@@ -90,19 +90,25 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 0,
         'name': 'Weather Feed Germany',
         'quality': 2,
+        'payment': 'Free',
+        'transmission': 'HTTP',
+        'syntax': 'XML',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
-            'name': 'Domain',
-            'curVal': 'Health'
+            'id': 'payment',
+            'name': 'Payment',
+            'value': 'Free'
           },
           {
-            'name': 'Region',
-            'curVal': 'Deutshland'
+            'id': 'transmission',
+            'name': 'Transmission',
+            'value': 'HTTP'
           },
           {
-            'name': 'Data-type',
-            'curVal': 'XML'
+            'id': 'syntax',
+            'name': 'Syntax',
+            'value': 'XML'
           }
         ],
         'img': './assets/img/graf.png',
@@ -114,19 +120,25 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 1,
         'name': 'Weather Feed Germany',
         'quality': 4,
+        'payment': 'Free',
+        'transmission': 'HTTPS',
+        'syntax': 'XML',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
-            'name': 'Domain',
-            'curVal': 'Health'
+            'id': 'payment',
+            'name': 'Payment',
+            'value': 'Free'
           },
           {
-            'name': 'Region',
-            'curVal': 'Deutshland'
+            'id': 'transmission',
+            'name': 'Transmission',
+            'value': 'HTTPS'
           },
           {
-            'name': 'Data-type',
-            'curVal': 'XML'
+            'id': 'syntax',
+            'name': 'Syntax',
+            'value': 'XML'
           }
         ],
         'img': './assets/img/graf.png',
@@ -138,19 +150,25 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 2,
         'name': 'Weather Feed Germany',
         'quality': 2,
+        'payment': 'Pay Per Vol',
+        'transmission': 'HTTP',
+        'syntax': 'JSON',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
-            'name': 'Domain',
-            'curVal': 'Health'
+            'id': 'payment',
+            'name': 'Payment',
+            'value': 'Pay Per Vol'
           },
           {
-            'name': 'Region',
-            'curVal': 'Deutshland'
+            'id': 'transmission',
+            'name': 'Transmission',
+            'value': 'HTTP'
           },
           {
-            'name': 'Data-type',
-            'curVal': 'JSON'
+            'id': 'syntax',
+            'name': 'Syntax',
+            'value': 'JSON'
           }
         ],
         'img': './assets/img/graf.png',
@@ -162,19 +180,25 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 3,
         'name': 'Weather Feed Germany',
         'quality': 4,
+        'payment': 'Free',
+        'transmission': 'HTTP',
+        'syntax': 'JSON',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
-            'name': 'Domain',
-            'curVal': 'Health'
+            'id': 'payment',
+            'name': 'Payment',
+            'value': 'Free'
           },
           {
-            'name': 'Region',
-            'curVal': 'Deutshland'
+            'id': 'transmission',
+            'name': 'Transmission',
+            'value': 'HTTP'
           },
           {
-            'name': 'Data-type',
-            'curVal': 'JSON'
+            'id': 'syntax',
+            'name': 'Syntax',
+            'value': 'JSON'
           }
         ],
         'img': './assets/img/graf.png',
@@ -185,20 +209,26 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         'id': 4,
         'name': 'Weather Feed Germany',
-        'quality': 4,
+        'quality': 3,
+        'payment': 'Pay Per Vol',
+        'transmission': 'MQTT',
+        'syntax': 'JSONP',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
-            'name': 'Domain',
-            'curVal': 'Health'
+            'id': 'payment',
+            'name': 'Payment',
+            'value': 'Pay Per Vol'
           },
           {
-            'name': 'Region',
-            'curVal': 'Deutshland'
+            'id': 'transmission',
+            'name': 'Transmission',
+            'value': 'MQTT'
           },
           {
-            'name': 'Data-type',
-            'curVal': 'JSON'
+            'id': 'syntax',
+            'name': 'Syntax',
+            'value': 'JSONP'
           }
         ],
         'img': './assets/img/graf.png',
@@ -209,20 +239,26 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         'id': 5,
         'name': 'Weather Feed Germany',
-        'quality': 4,
+        'quality': 1,
+        'payment': 'Pay Per Use',
+        'transmission': 'HTTP',
+        'syntax': 'RDF',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
-            'name': 'Domain',
-            'curVal': 'Health'
+            'id': 'payment',
+            'name': 'Payment',
+            'value': 'Pay Per Use'
           },
           {
-            'name': 'Region',
-            'curVal': 'Deutshland'
+            'id': 'transmission',
+            'name': 'Transmission',
+            'value': 'HTTP'
           },
           {
-            'name': 'Data-type',
-            'curVal': 'RDF'
+            'id': 'syntax',
+            'name': 'Syntax',
+            'value': 'RDF'
           }
         ],
         'img': './assets/img/graf.png',
