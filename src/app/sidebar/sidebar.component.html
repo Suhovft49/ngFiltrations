@@ -7,9 +7,10 @@
         <span>{{ filter.filterName }}</span>
         <ul>
           <li *ngFor="let filterItem of filter.filterList">
-            <mat-checkbox (click)="saveFilters()"
-                          color="primary"
-                          [(ngModel)]="filterItem.value">{{ filterItem.name }}</mat-checkbox>
+            <mat-checkbox color="primary"
+                          *ngIf="true"
+                          [(ngModel)]="filterItem.value"
+                          (click)="saveFilters()">{{ filterItem.name }}</mat-checkbox>
           </li>
         </ul>
       </div>

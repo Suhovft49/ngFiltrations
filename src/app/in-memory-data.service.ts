@@ -3,15 +3,36 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const settings = [
-      // {
-      //   'id': 'quality',
-      //   'filterName': 'Data Quality',
-      //   'filterList': [
-      //     {
-      //       'name': 'quality',
-      //       'value': 4
-      //     }]
-      // },
+      {
+        'id': 'quality',
+        'filterName': 'Data Quality',
+        'filterList': [
+          {
+            'id': 1,
+            'name': 'st1',
+            'value': false
+          },
+          {
+            'id': 2,
+            'name': 'st2',
+            'value': false
+          },
+          {
+            'id': 3,
+            'name': 'st3',
+            'value': false
+          },
+          {
+            'id': 4,
+            'name': 'st4',
+            'value': false
+          },
+          {
+            'id': 5,
+            'name': 'st5',
+            'value': false
+          }]
+      },
       {
         'id': 'payment',
         'filterName': 'Payment',
