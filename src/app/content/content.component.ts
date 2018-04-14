@@ -27,7 +27,7 @@ export class ContentComponent implements OnInit {
     this.getItems();
   }
 
-  getItems(filters: any) {
+  getItems(filters?: any) {
     this.httpService
       .getContent(filters)
       .then((resp) => {
