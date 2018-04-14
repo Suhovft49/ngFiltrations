@@ -29,7 +29,10 @@ export class SidebarComponent implements OnInit {
   }
 
   saveFilters(): void {
-    this.settingsService.sendSetting(this.filtersArray);
+    // waiting timeout to filters model update
+    setTimeout(() => {
+      this.settingsService.sendSetting(this.filtersArray);
+    }, 0);
   }
 
 }

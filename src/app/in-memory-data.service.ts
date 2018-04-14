@@ -17,14 +17,17 @@ export class InMemoryDataService implements InMemoryDbService {
         'filterName': 'Payment',
         'filterList': [
           {
+            'id': 'free',
             'name': 'Free',
             'value': false
           },
           {
+            'id': 'ppuse',
             'name': 'Pay Per Use',
             'value': false
           },
           {
+            'id': 'ppvol',
             'name': 'Pay Per Vol',
             'value': false
           }]
@@ -34,30 +37,37 @@ export class InMemoryDataService implements InMemoryDbService {
         'filterName': 'Semantics & syntax',
         'filterList': [
           {
+            'id': 'gs1',
             'name': 'GS1',
             'value': false
           },
           {
+            'id': 'xml',
             'name': 'XML',
             'value': false
           },
           {
+            'id': 'rdf',
             'name': 'RDF',
             'value': false
           },
           {
+            'id': 'json',
             'name': 'JSON',
             'value': false
           },
           {
+            'id': 'jsonp',
             'name': 'JSONP',
             'value': false
           },
           {
+            'id': 'xhtml',
             'name': 'XHTML',
             'value': false
           },
           {
+            'id': 'html',
             'name': 'HTML',
             'value': false
           }]
@@ -67,18 +77,22 @@ export class InMemoryDataService implements InMemoryDbService {
         'filterName': 'Transmission',
         'filterList': [
           {
+            'id': 'mqtt',
             'name': 'MQTT',
             'value': false
           },
           {
+            'id': 'http',
             'name': 'HTTP',
             'value': false
           },
           {
+            'id': 'https',
             'name': 'HTTPS',
             'value': false
           },
           {
+            'id': 'webs',
             'name': 'Web-Services',
             'value': false
           }]
@@ -89,10 +103,11 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         'id': 0,
         'name': 'Weather Feed Germany',
+        // params:id: filtersList:id
         'quality': 2,
-        'payment': 'Free',
-        'transmission': 'HTTP',
-        'syntax': 'XML',
+        'payment': 'free',
+        'transmission': 'http',
+        'syntax': 'xml',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
@@ -120,9 +135,9 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 1,
         'name': 'Weather Feed Germany',
         'quality': 4,
-        'payment': 'Free',
-        'transmission': 'HTTPS',
-        'syntax': 'XML',
+        'payment': 'free',
+        'transmission': 'https',
+        'syntax': 'xml',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
@@ -150,9 +165,9 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 2,
         'name': 'Weather Feed Germany',
         'quality': 2,
-        'payment': 'Pay Per Vol',
-        'transmission': 'HTTP',
-        'syntax': 'JSON',
+        'payment': 'ppvol',
+        'transmission': 'http',
+        'syntax': 'json',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
@@ -180,9 +195,9 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 3,
         'name': 'Weather Feed Germany',
         'quality': 4,
-        'payment': 'Free',
-        'transmission': 'HTTP',
-        'syntax': 'JSON',
+        'payment': 'free',
+        'transmission': 'http',
+        'syntax': 'json',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
@@ -210,9 +225,9 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 4,
         'name': 'Weather Feed Germany',
         'quality': 3,
-        'payment': 'Pay Per Vol',
-        'transmission': 'MQTT',
-        'syntax': 'JSONP',
+        'payment': 'ppvol',
+        'transmission': 'mqtt',
+        'syntax': 'jsonp',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
@@ -240,9 +255,9 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 5,
         'name': 'Weather Feed Germany',
         'quality': 1,
-        'payment': 'Pay Per Use',
-        'transmission': 'HTTP',
-        'syntax': 'RDF',
+        'payment': 'ppuse',
+        'transmission': 'http',
+        'syntax': 'rdf',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {

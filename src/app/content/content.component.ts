@@ -19,6 +19,7 @@ export class ContentComponent implements OnInit {
     // rxjs subscriber
     this.settingsService.catchSetting().subscribe(filters => {
       this.filters = filters;
+      this.getItems(filters);
     });
   }
 
@@ -26,9 +27,9 @@ export class ContentComponent implements OnInit {
     this.getItems();
   }
 
-  getItems() {
+  getItems(filters: any) {
     this.httpService
-      .getContent()
+      .getContent(filters)
       .then((resp) => {
         this.contentArray = resp.data;
       })

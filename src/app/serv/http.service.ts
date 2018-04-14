@@ -8,13 +8,27 @@ export class HttpService {
 
   constructor(private http: HttpClient) {}
 
-  getContent(): Promise<any> {
+  getContent(filters: any): Promise<any> {
+    const url = filters ? this.createFilteredURL(filters) : this.contentUrl;
     return this.http
-      // .get(`app/content?quality=2&id=2`)
-      .get(`app/content?payment=Free`)
+      .get(url)
       .toPromise()
       .then((response) => response)
       .catch(this.handleError);
+  }
+
+  createFilteredURL(filters: any): string {
+    // .get(`app/content?quality=2&syntax=xml`)
+    const params = [];
+
+    filters.forEach((filter) => {
+      filter.filterList.forEach((item) => {
+        if (item.value) {
+          params.push(`${filter.id}=${item.id}`);
+        }
+      });
+    });
+    return `${this.contentUrl}?${params.join('&')}`;
   }
 
   private handleError(error: any): Promise<any> {
