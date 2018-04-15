@@ -38,17 +38,17 @@ export class InMemoryDataService implements InMemoryDbService {
         'filterName': 'Payment',
         'filterList': [
           {
-            'id': 'free',
+            'id': 'free1',
             'name': 'Free',
             'value': false
           },
           {
-            'id': 'ppuse',
+            'id': 'ppuse2',
             'name': 'Pay Per Use',
             'value': false
           },
           {
-            'id': 'ppvol',
+            'id': 'ppvol3',
             'name': 'Pay Per Vol',
             'value': false
           }]
@@ -63,32 +63,32 @@ export class InMemoryDataService implements InMemoryDbService {
             'value': false
           },
           {
-            'id': 'xml',
+            'id': 'xml2',
             'name': 'XML',
             'value': false
           },
           {
-            'id': 'rdf',
+            'id': 'rdf3',
             'name': 'RDF',
             'value': false
           },
           {
-            'id': 'json',
+            'id': 'json4',
             'name': 'JSON',
             'value': false
           },
           {
-            'id': 'jsonp',
+            'id': 'jsonp5',
             'name': 'JSONP',
             'value': false
           },
           {
-            'id': 'xhtml',
+            'id': 'xhtm6',
             'name': 'XHTML',
             'value': false
           },
           {
-            'id': 'html',
+            'id': 'html7',
             'name': 'HTML',
             'value': false
           }]
@@ -98,22 +98,22 @@ export class InMemoryDataService implements InMemoryDbService {
         'filterName': 'Transmission',
         'filterList': [
           {
-            'id': 'mqtt',
+            'id': 'mqtt1',
             'name': 'MQTT',
             'value': false
           },
           {
-            'id': 'http',
+            'id': 'http2',
             'name': 'HTTP',
             'value': false
           },
           {
-            'id': 'https',
+            'id': 'https3',
             'name': 'HTTPS',
             'value': false
           },
           {
-            'id': 'webs',
+            'id': 'webs4',
             'name': 'Web-Services',
             'value': false
           }]
@@ -126,9 +126,9 @@ export class InMemoryDataService implements InMemoryDbService {
         'name': 'Weather Feed Germany',
         // params:id: filtersList:id
         'quality': 2,
-        'payment': 'free',
-        'transmission': 'http',
-        'syntax': 'xml',
+        'payment': 'free1',
+        'transmission': 'http2',
+        'syntax': 'xml2',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
@@ -156,9 +156,9 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 1,
         'name': 'Weather Feed Germany',
         'quality': 4,
-        'payment': 'free',
-        'transmission': 'https',
-        'syntax': 'xml',
+        'payment': 'free1',
+        'transmission': 'https3',
+        'syntax': 'xml2',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
@@ -186,9 +186,9 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 2,
         'name': 'Weather Feed Germany',
         'quality': 2,
-        'payment': 'ppvol',
-        'transmission': 'http',
-        'syntax': 'json',
+        'payment': 'ppvol3',
+        'transmission': 'http2',
+        'syntax': 'json4',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
@@ -216,9 +216,9 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 3,
         'name': 'Weather Feed Germany',
         'quality': 4,
-        'payment': 'free',
-        'transmission': 'http',
-        'syntax': 'json',
+        'payment': 'free1',
+        'transmission': 'http2',
+        'syntax': 'json4',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
@@ -246,9 +246,9 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 4,
         'name': 'Weather Feed Germany',
         'quality': 3,
-        'payment': 'ppvol',
-        'transmission': 'mqtt',
-        'syntax': 'jsonp',
+        'payment': 'ppvol3',
+        'transmission': 'mqtt1',
+        'syntax': 'jsonp5',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
@@ -276,9 +276,9 @@ export class InMemoryDataService implements InMemoryDbService {
         'id': 5,
         'name': 'Weather Feed Germany',
         'quality': 1,
-        'payment': 'ppuse',
-        'transmission': 'http',
-        'syntax': 'rdf',
+        'payment': 'ppuse2',
+        'transmission': 'http2',
+        'syntax': 'rdf3',
         'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
         'params': [
           {
@@ -295,6 +295,36 @@ export class InMemoryDataService implements InMemoryDbService {
             'id': 'syntax',
             'name': 'Syntax',
             'value': 'RDF'
+          }
+        ],
+        'img': './assets/img/graf.png',
+        'logoImg': './assets/img/DB-Bahn.png',
+        'price': 19,
+        'currency': '€'
+      },
+      {
+        'id': 6,
+        'name': 'Weather Feed Germany',
+        'quality': 2,
+        'payment': 'free1',
+        'transmission': 'http2',
+        'syntax': 'xml2',
+        'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
+        'params': [
+          {
+            'id': 'payment',
+            'name': 'Payment',
+            'value': 'Free'
+          },
+          {
+            'id': 'transmission',
+            'name': 'Transmission',
+            'value': 'HTTP'
+          },
+          {
+            'id': 'syntax',
+            'name': 'Syntax',
+            'value': 'XML'
           }
         ],
         'img': './assets/img/graf.png',

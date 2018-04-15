@@ -25,11 +25,15 @@ export class HttpService {
     const params = [];
 
     filters.forEach((filter) => {
+      const filtersArr = [];
       filter.filterList.forEach((item) => {
         if (item.value) {
-          params.push(`${filter.id}=${item.id}`);
+          filtersArr.push(`${item.id}`);
         }
       });
+      if (filtersArr.length) {
+        params.push(`${filter.id}=[${filtersArr.join(',')}]$`);
+      }
     });
     return `${this.contentUrl}?${params.join('&')}`;
   }
