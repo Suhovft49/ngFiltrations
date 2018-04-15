@@ -1,7 +1,11 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  EventEmitter,
+  Output } from '@angular/core';
 import { HttpService} from '../serv/http.service';
 import { SettingsService } from '../settings.service';
-// import 'rxjs/add/operator/filter';
 
 @Component({
   selector: 'app-content',
@@ -11,6 +15,7 @@ import { SettingsService } from '../settings.service';
   encapsulation: ViewEncapsulation.None
 })
 export class ContentComponent implements OnInit {
+  @Output() changedItemsNumber = new EventEmitter<number>();
   error: string;
   contentArray: any;
   filters: any;
@@ -32,6 +37,7 @@ export class ContentComponent implements OnInit {
       .getContent(filters)
       .then((resp) => {
         this.contentArray = resp.data;
+        this.changedItemsNumber.emit(resp.data.length);
       })
       .catch(error => this.error = error);
   }

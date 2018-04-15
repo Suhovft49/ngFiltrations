@@ -1,3 +1,28 @@
-.products-filters {
-  padding: 0 0 5px;
+.products__filters {
+  display: flex;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+.products__filters-btn {
+  align-self: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all .4s ease;
+}
+.m-sidenav-opened .products__filters-btn {
+  margin-right: 141px;
+}
+.products__filters-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all .4s ease;
+}
+.products__sort-selector {
+  position: absolute;
 }

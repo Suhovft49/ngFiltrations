@@ -8,6 +8,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
   isOpened: boolean;
+  itemsNumber: number;
+
+  sorts = [
+    {value: 'ask', viewValue: 'Ask'},
+    {value: 'desk', viewValue: 'Desk'},
+  ];
 
   constructor() {}
 
@@ -17,6 +23,10 @@ export class ProductsComponent implements OnInit {
 
   openSidenav() {
     this.isOpened = !this.isOpened;
+  }
+
+  onChangedItemsNumber(itemsNumber: number): void {
+    this.itemsNumber = itemsNumber;
   }
 
 }
