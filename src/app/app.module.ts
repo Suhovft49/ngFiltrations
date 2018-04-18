@@ -3,13 +3,17 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CdkTableModule } from '@angular/cdk/table';
+import { HttpClientModule } from '@angular/common/http';
 
+// pages components
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProductsComponent } from './products/products.component';
 import { ContentComponent } from './content/content.component';
 
-import { HttpClientModule } from '@angular/common/http';
+
+// shared components
+import { StarsComponent } from './shared_components/stars.component';
 
 // fake data service
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -106,7 +110,8 @@ const appRoutes: Routes = [
     AppComponent,
     SidebarComponent,
     ProductsComponent,
-    ContentComponent
+    ContentComponent,
+    StarsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

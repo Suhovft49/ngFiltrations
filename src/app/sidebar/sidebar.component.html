@@ -5,13 +5,16 @@
                  class="b-sidenav__panel px-3 pt-3 pb-0 border">
       <div *ngFor="let filter of filtersArray">
         <span>{{ filter.filterName }}</span>
+        <app-stars *ngIf="filter.id === 'quality'"
+                   [(qualifications)]="filter.filterList"></app-stars>
         <ul>
-          <li *ngFor="let filterItem of filter.filterList">
-            <mat-checkbox color="primary"
-                          *ngIf="true"
-                          [(ngModel)]="filterItem.value"
-                          (click)="saveFilters()">{{ filterItem.name }}</mat-checkbox>
-          </li>
+          <ng-container *ngFor="let filterItem of filter.filterList">
+            <li *ngIf="filter.id !== 'quality'">
+              <mat-checkbox color="primary"
+                            [(ngModel)]="filterItem.value"
+                            (click)="saveFilters()">{{ filterItem.name }}</mat-checkbox>
+            </li>
+          </ng-container>
         </ul>
       </div>
     </mat-sidenav>
