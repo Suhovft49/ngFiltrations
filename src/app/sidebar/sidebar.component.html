@@ -6,7 +6,9 @@
       <div *ngFor="let filter of filtersArray">
         <span>{{ filter.filterName }}</span>
         <app-stars *ngIf="filter.id === 'quality'"
-                   [(qualifications)]="filter.filterList"></app-stars>
+                   [(qualifications)]="filter.filterList"
+                   [(current)]="filter.current"
+                   (onChanged)="saveFilters()"></app-stars>
         <ul>
           <ng-container *ngFor="let filterItem of filter.filterList">
             <li *ngIf="filter.id !== 'quality'">

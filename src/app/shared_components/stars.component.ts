@@ -1,4 +1,8 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import {
+  Component,
+  Input,
+  EventEmitter,
+  Output } from '@angular/core';
 
 @Component({
   selector: 'app-stars',
@@ -6,11 +10,11 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
     <div class="stars">
       <label *ngFor="let qualification of qualifications"
              class="stars__label"
-             [ngClass]="{'checked': qualification.value}">
+             [ngClass]="{'checked': qualification.id <= current.id}">
         <input type="checkbox"
+               [name]="qualification.name"
                class="stars__input"
-               [(ngModel)]="qualification.value"
-               (click)="setQualification()" />
+               (click)="setQualification(qualification)" />
       </label>
     </div>
   `,
@@ -39,15 +43,15 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
     }
   `]
 })
-export class StarsComponent implements OnInit {
+export class StarsComponent {
   @Input() qualifications: any;
+  @Input() current: any;
+  @Output() onChanged = new EventEmitter<any>();
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.qualifications);
+  setQualification(qualification) {
+    this.current.id = qualification.id;
+    this.onChanged.emit();
   }
-
-  setQualification() {}
-
 }

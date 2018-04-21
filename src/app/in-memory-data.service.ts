@@ -5,32 +5,28 @@ export class InMemoryDataService implements InMemoryDbService {
     const settings = [
       {
         'id': 'quality',
+        'current': {'id': 0},
         'filterName': 'Data Quality',
         'filterList': [
           {
             'id': 1,
-            'name': 'st1',
-            'value': false
+            'name': 'st1'
           },
           {
             'id': 2,
-            'name': 'st2',
-            'value': false
+            'name': 'st2'
           },
           {
             'id': 3,
-            'name': 'st3',
-            'value': false
+            'name': 'st3'
           },
           {
             'id': 4,
-            'name': 'st4',
-            'value': false
+            'name': 'st4'
           },
           {
             'id': 5,
-            'name': 'st5',
-            'value': false
+            'name': 'st5'
           }]
       },
       {
@@ -209,7 +205,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ],
         'img': './assets/img/graf.png',
         'logoImg': './assets/img/DB-Bahn.png',
-        'price': 19,
+        'price': 10,
         'currency': '€'
       },
       {
@@ -239,7 +235,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ],
         'img': './assets/img/graf.png',
         'logoImg': './assets/img/DB-Bahn.png',
-        'price': 19,
+        'price': 193,
         'currency': '€'
       },
       {
@@ -269,7 +265,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ],
         'img': './assets/img/graf.png',
         'logoImg': './assets/img/DB-Bahn.png',
-        'price': 19,
+        'price': 149,
         'currency': '€'
       },
       {
@@ -299,7 +295,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ],
         'img': './assets/img/graf.png',
         'logoImg': './assets/img/DB-Bahn.png',
-        'price': 19,
+        'price': 15,
         'currency': '€'
       },
       {
@@ -330,6 +326,36 @@ export class InMemoryDataService implements InMemoryDbService {
         'img': './assets/img/graf.png',
         'logoImg': './assets/img/DB-Bahn.png',
         'price': 19,
+        'currency': '€'
+      },
+      {
+        'id': 7,
+        'name': 'Weather Germany',
+        'quality': 5,
+        'payment': 'free1',
+        'transmission': 'http2',
+        'syntax': 'xhtm6',
+        'description': 'Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet Lorem ipsum dotor sit ammet',
+        'params': [
+          {
+            'id': 'payment',
+            'name': 'Payment',
+            'value': 'Free'
+          },
+          {
+            'id': 'transmission',
+            'name': 'Transmission',
+            'value': 'HTTP'
+          },
+          {
+            'id': 'syntax',
+            'name': 'Syntax',
+            'value': 'XHTML'
+          }
+        ],
+        'img': './assets/img/graf.png',
+        'logoImg': './assets/img/DB-Bahn.png',
+        'price': 190,
         'currency': '€'
       }
     ];

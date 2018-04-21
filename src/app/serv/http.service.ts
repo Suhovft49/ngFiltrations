@@ -26,15 +26,21 @@ export class HttpService {
 
     filters.forEach((filter) => {
       const filtersArr = [];
-      filter.filterList.forEach((item) => {
-        if (item.value) {
-          filtersArr.push(`${item.id}`);
-        }
-      });
+      if (filter.id === 'quality') {
+        filtersArr.push(`${filter.current.id}`);
+      }
+      if (filter.id !== 'quality') {
+        filter.filterList.forEach((item) => {
+          if (item.value) {
+            filtersArr.push(`${item.id}`);
+          }
+        });
+      }
       if (filtersArr.length) {
         params.push(`${filter.id}=[${filtersArr.join(',')}]$`);
       }
     });
+    // params = ["quality=[4]$", "payment=[free1]$", "syntax=[gs1,html7]$", "transmission=[mqtt1,https3]$"]
     return `${this.contentUrl}?${params.join('&')}`;
   }
 
