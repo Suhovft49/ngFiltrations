@@ -28,17 +28,6 @@ export class SettingsService {
       .catch(this.handleError);
   }
 
-  // setSettings(settings: any) {
-  //   return this.putSetting(settings);
-  // }
-  //
-  // private putSetting(settings: any): Promise<any> {
-  //   const url = `${this.settingsUrl}/${settings.id}`;
-  //   return this.http
-  //     .post(url, settings)
-  //     .toPromise();
-  // }
-
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.body.error || error);

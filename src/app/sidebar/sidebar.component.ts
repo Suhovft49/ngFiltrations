@@ -1,5 +1,9 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
-import { SettingsService } from '../settings.service';
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation,
+  Input } from '@angular/core';
+import { SettingsService } from '../services/settings.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,11 +13,10 @@ import { SettingsService } from '../settings.service';
 })
 export class SidebarComponent implements OnInit {
   @Input() isOpened: boolean;
-
   error: string;
   filtersArray: any;
 
-  constructor(private settingsService: SettingsService) { }
+  constructor(private settingsService: SettingsService) {}
 
   ngOnInit() {
     this.getFilters();

@@ -15,11 +15,12 @@ import { ContentComponent } from './content/content.component';
 // shared components
 import { StarsComponent } from './shared_components/stars.component';
 import { ShowStarsComponent } from './shared_components/show_stars.component';
+import { HeaderComponent } from './shared_components/header.component';
 
 // fake data service
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
-import { SettingsService } from './settings.service';
+import { SettingsService } from './services/settings.service';
 
 import {
   Routes,
@@ -112,6 +113,7 @@ const appRoutes: Routes = [
     SidebarComponent,
     ProductsComponent,
     ContentComponent,
+    HeaderComponent,
     StarsComponent,
     ShowStarsComponent
   ],

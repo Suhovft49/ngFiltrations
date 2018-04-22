@@ -26,7 +26,7 @@ export class HttpService {
 
     filters.forEach((filter) => {
       const filtersArr = [];
-      if (filter.id === 'quality') {
+      if (filter.id === 'quality' && filter.current.id) {
         filtersArr.push(`${filter.current.id}`);
       }
       if (filter.id !== 'quality') {
@@ -41,6 +41,7 @@ export class HttpService {
       }
     });
     // params = ["quality=[4]$", "payment=[free1]$", "syntax=[gs1,html7]$", "transmission=[mqtt1,https3]$"]
+    console.log(`${this.contentUrl}?${params.join('&')}`);
     return `${this.contentUrl}?${params.join('&')}`;
   }
 

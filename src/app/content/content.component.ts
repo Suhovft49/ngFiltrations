@@ -4,8 +4,8 @@ import {
   ViewEncapsulation,
   EventEmitter,
   Output } from '@angular/core';
-import { HttpService} from '../serv/http.service';
-import { SettingsService } from '../settings.service';
+import { HttpService } from '../services/http.service';
+import { SettingsService } from '../services/settings.service';
 
 @Component({
   selector: 'app-content',
