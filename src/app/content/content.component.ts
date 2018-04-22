@@ -29,7 +29,17 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getFilters();
     this.getItems();
+  }
+
+  getFilters() {
+    this.settingsService
+      .getSettings()
+      .then((res) => {
+        this.filters = res.data;
+      })
+      .catch(error => this.error = error);
   }
 
   getItems(filters?: any) {

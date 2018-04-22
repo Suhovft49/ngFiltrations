@@ -3,7 +3,11 @@
   <div class="row pb-3">
     <div class="col-md-12">
       <span class="b-item__name pr-3">{{item.name}}:{{item.id}}</span>
-      <span class="b-item__rate">rate {{ item.quality }}</span>
+      <span class="b-item__rate">
+        <app-show-stars *ngIf="filters"
+                        [(qualifications)]="filters[0].filterList"
+                        [(current)]="item.quality"></app-show-stars>
+      </span>
     </div>
   </div>
 

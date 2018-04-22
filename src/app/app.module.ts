@@ -14,6 +14,7 @@ import { ContentComponent } from './content/content.component';
 
 // shared components
 import { StarsComponent } from './shared_components/stars.component';
+import { ShowStarsComponent } from './shared_components/show_stars.component';
 
 // fake data service
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -111,7 +112,8 @@ const appRoutes: Routes = [
     SidebarComponent,
     ProductsComponent,
     ContentComponent,
-    StarsComponent
+    StarsComponent,
+    ShowStarsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

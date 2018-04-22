@@ -9,7 +9,7 @@
 }
 
 .b-item__rate {
-
+  display: inline-block;
 }
 
 .b-item__img {
