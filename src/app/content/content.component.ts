@@ -46,9 +46,13 @@ export class ContentComponent implements OnInit {
     this.httpService
       .getContent(filters)
       .then((resp) => {
-        this.contentArray = resp.data;
+        this.contentArray = this.sortFunction(resp.data);
         this.changedItemsNumber.emit(resp.data.length);
       })
       .catch(error => this.error = error);
+  }
+
+  sortFunction(dataArray) {
+    return dataArray.sort((a, b) => a.price - b.price);
   }
 }
