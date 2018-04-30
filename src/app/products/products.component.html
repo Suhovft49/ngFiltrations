@@ -9,7 +9,9 @@
     <div class="products__filters-container">
       <span>{{ itemsNumber }}&nbsp;Data-sets found:</span>
       <mat-form-field class="products__sort-selector">
-        <mat-select placeholder="Sort Results By">
+        <mat-select placeholder="Sort Results By"
+                    [(ngModel)]="selectedSorting"
+                    name="sort">
           <mat-option *ngFor="let sort of sorts" [value]="sort.value">
             {{ sort.viewValue }}
           </mat-option>
@@ -19,6 +21,7 @@
   </div>
 
   <app-sidebar [(isOpened)]="isOpened">
-    <app-content (changedItemsNumber)="onChangedItemsNumber($event)"></app-content>
+    <app-content (changedItemsNumber)="onChangedItemsNumber($event)"
+                 [sortingChanged]="selectedSorting"></app-content>
   </app-sidebar>
 </div>

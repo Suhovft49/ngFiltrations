@@ -1,4 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-products',
@@ -8,11 +11,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
   isOpened: boolean;
+  selectedSorting: string;
   itemsNumber: number;
 
   sorts = [
-    {value: 'ask', viewValue: 'Ask'},
-    {value: 'desk', viewValue: 'Desk'},
+    {value: 'asc', viewValue: 'Price asc'},
+    {value: 'desc', viewValue: 'Price desc'},
   ];
 
   constructor() {}
