@@ -16,6 +16,12 @@
   background: #f2f2f2;
 }
 
+.b-sidenav__filter-name {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 .m-sidenav-opened,
 .b-sidenav__content {
   transition: all .2s ease;

@@ -3,20 +3,23 @@
     <mat-sidenav #sidenav opened="true"
                  [(opened)]="isOpened"
                  class="b-sidenav__panel px-3 pt-3 pb-0 border">
-      <div *ngFor="let filter of filtersArray">
-        <span>{{ filter.filterName }}</span>
+      <div *ngFor="let filter of filtersArray"
+           class="b-sidenav__filter-section mb-3">
+        <span class="b-sidenav__filter-name my-2">{{ filter.filterName }}</span>
         <app-stars *ngIf="filter.id === 'quality'"
                    [(qualifications)]="filter.filterList"
                    [(current)]="filter.current"
                    (onChanged)="saveFilters()"></app-stars>
-        <ul>
-          <ng-container *ngFor="let filterItem of filter.filterList">
-            <li *ngIf="filter.id !== 'quality'">
-              <mat-checkbox color="primary"
-                            [(ngModel)]="filterItem.value"
-                            (click)="saveFilters()">{{ filterItem.name }}</mat-checkbox>
-            </li>
-          </ng-container>
+        <ul *ngIf="filter.id !== 'quality'">
+          <app-show-more>
+            <ng-container *ngFor="let filterItem of filter.filterList">
+              <li>
+                <mat-checkbox color="primary"
+                              [(ngModel)]="filterItem.value"
+                              (click)="saveFilters()">{{ filterItem.name }}</mat-checkbox>
+              </li>
+            </ng-container>
+          </app-show-more>
         </ul>
       </div>
     </mat-sidenav>

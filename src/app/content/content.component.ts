@@ -36,7 +36,7 @@ export class ContentComponent implements OnInit, OnChanges {
     this.getItems();
   }
 
-  ngOnChanges(changes: SimpleChanges) {
+  ngOnChanges() {
     if (this.sortingChanged) {
       this.contentArray = this.sortFunction(this.contentArray, this.sortingChanged);
     }
