@@ -10,17 +10,9 @@
                    [(qualifications)]="filter.filterList"
                    [(current)]="filter.current"
                    (onChanged)="saveFilters()"></app-stars>
-        <ul *ngIf="filter.id !== 'quality'">
-          <app-show-more>
-            <ng-container *ngFor="let filterItem of filter.filterList">
-              <li>
-                <mat-checkbox color="primary"
-                              [(ngModel)]="filterItem.value"
-                              (click)="saveFilters()">{{ filterItem.name }}</mat-checkbox>
-              </li>
-            </ng-container>
-          </app-show-more>
-        </ul>
+        <app-filters-list *ngIf="filter.id !== 'quality'"
+                          (filterSaved)="saveFilters()"
+                          [(itemsList)]="filter.filterList"></app-filters-list>
       </div>
     </mat-sidenav>
 
